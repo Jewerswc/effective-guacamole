@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.content }}</p>
+    {% if article.media_url %}
+        <img src="{{ article.media_url }}" alt="{{ article.title }}">
+    {% endif %}
+    <p>Published at: {{ article.published_at }}</p>
+    <p>Sentiment: {{ article.sentiment }} ({{ article.sentiment_value }})</p>
+</body>
+</html>
